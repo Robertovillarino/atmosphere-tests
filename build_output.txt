@@ -1,0 +1,50 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< qa.atmosphere:atmosphere-tests >-------------------
+[INFO] Building atmosphere-tests 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ atmosphere-tests ---
+[INFO] Deleting c:\Users\RobertoVillarino\SASA-Proyectos\Nuevo Proyecto\atmosphere-tests\target
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ atmosphere-tests ---
+[INFO] skip non existing resourceDirectory c:\Users\RobertoVillarino\SASA-Proyectos\Nuevo Proyecto\atmosphere-tests\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ atmosphere-tests ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ atmosphere-tests ---
+[INFO] skip non existing resourceDirectory c:\Users\RobertoVillarino\SASA-Proyectos\Nuevo Proyecto\atmosphere-tests\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ atmosphere-tests ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ atmosphere-tests ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running LoginTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.062 s -- in LoginTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ atmosphere-tests ---
+[INFO] Building jar: c:\Users\RobertoVillarino\SASA-Proyectos\Nuevo Proyecto\atmosphere-tests\target\atmosphere-tests-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ atmosphere-tests ---
+[INFO] Installing c:\Users\RobertoVillarino\SASA-Proyectos\Nuevo Proyecto\atmosphere-tests\pom.xml to C:\Users\RobertoVillarino\.m2\repository\qa\atmosphere\atmosphere-tests\1.0-SNAPSHOT\atmosphere-tests-1.0-SNAPSHOT.pom
+[INFO] Installing c:\Users\RobertoVillarino\SASA-Proyectos\Nuevo Proyecto\atmosphere-tests\target\atmosphere-tests-1.0-SNAPSHOT.jar to C:\Users\RobertoVillarino\.m2\repository\qa\atmosphere\atmosphere-tests\1.0-SNAPSHOT\atmosphere-tests-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.018 s
+[INFO] Finished at: 2026-04-20T16:56:20-06:00
+[INFO] ------------------------------------------------------------------------
