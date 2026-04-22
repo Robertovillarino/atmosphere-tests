@@ -2,3 +2,4 @@
 "trigger CI" 
 "trigger 2" 
 "trigger" 
+"trigger CI" 
