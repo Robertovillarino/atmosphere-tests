@@ -3,20 +3,24 @@ name: QA Automation CI
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Instalar Java 21 manual
-  run: |
-    sudo apt update
-    sudo apt install -y maven wget
-    wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb
-    sudo dpkg -i jdk-21_linux-x64_bin.deb
-    export JAVA_HOME=/usr/lib/jvm/jdk-21
-    export PATH=$JAVA_HOME/bin:$PATH
-    java -version
-    javac -version
-    mvn clean test
+      - name: Clonar repo manual
+        run: |
+          git clone https://github.com/Robertovillarino/atmosphere-tests.git .
+
+      - name: Instalar Java 21 y Maven
+        run: |
+          sudo apt update
+          sudo apt install -y maven openjdk-21-jdk
+          java -version
+          javac -version
+
+      - name: Ejecutar pruebas
+        run: |
+          mvn clean test
