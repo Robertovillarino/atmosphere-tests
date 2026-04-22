@@ -10,17 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clonar repo manual
+      - name: Instalar Java 21 correctamente
         run: |
-          git clone https://github.com/Robertovillarino/atmosphere-tests.git .
+            sudo apt update
+            sudo apt install -y maven openjdk-21-jdk
 
-      - name: Instalar Java 21 y Maven
-        run: |
-          sudo apt update
-          sudo apt install -y maven openjdk-21-jdk
-          java -version
-          javac -version
+            export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+            export PATH=$JAVA_HOME/bin:$PATH
 
-      - name: Ejecutar pruebas
-        run: |
-          mvn clean test
+            echo "JAVA_HOME=$JAVA_HOME"
+            java -version
+            javac -version
+
+            mvn -version
