@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Ejecutar pruebas directamente
-  run: |
-    sudo apt update
-    sudo apt install -y maven openjdk-17-jdk
-    mvn -f $GITHUB_WORKSPACE/pom.xml clean test
+        run: |
+          sudo apt update
+          sudo apt install -y maven openjdk-17-jdk
+          mvn -f $GITHUB_WORKSPACE/pom.xml clean test
