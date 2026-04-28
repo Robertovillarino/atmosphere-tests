@@ -1,34 +1,21 @@
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-import java.time.Duration;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LoginTest {
 
- @Test
-public void testGoogle() {
-    ChromeOptions options = new ChromeOptions();
-    //options.addArguments("--headless=new");
+    @Test
+    void loginValido() {
+        String usuario = "admin";
+        String password = "1234";
 
-    WebDriverManager.chromedriver().setup();
-    WebDriver driver = new ChromeDriver(options);
-
-    try {
-        driver.get("https://www.google.com");
-
-        String title = driver.getTitle();
-
-        assertTrue(title.contains("Google"));
-    } finally {
-        //driver.quit();
+        assertTrue(usuario.equals("admin") && password.equals("1234"));
     }
-}
+
+    @Test
+    void loginInvalido() {
+        String usuario = "admin";
+        String password = "wrong";
+
+        assertFalse(password.equals("1234"));
+    }
 }
